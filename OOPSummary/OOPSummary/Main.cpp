@@ -43,14 +43,14 @@ int main()
 		animals[i]->makeSound();
 	}
 
+	// 랜덤으로 동물원에 동물 추가하기
 	Zoo my_zoo;
-
-	srand(time(0));
-
+	srand(time(0)); // 난수 생성
 	for (int i = 0; i < 10; i++)
 	{
 		my_zoo.addAnimal(createRandomAnimal());
 	}
 
+	// 모든 동물이 행동하기
 	my_zoo.performActions();
 }
