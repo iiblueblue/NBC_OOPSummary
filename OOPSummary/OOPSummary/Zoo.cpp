@@ -28,9 +28,10 @@ void Zoo::performActions()
 Zoo::~Zoo()
 {
 	// 모든 동물 메모리 해제
-	for (int i = 0; i < animalCount; i++)
+	
+	for (int i = 0; i < 10; i++)
 	{
 		delete animals[i];
-		cout << "메모리 해제" << endl;
+		animals[i] = nullptr;
 	}
 }

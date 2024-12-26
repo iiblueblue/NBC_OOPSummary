@@ -32,21 +32,22 @@ Animal* createRandomAnimal()
 int main()
 {
 	// Animal 타입의 포인터 배열 선언
-	Animal* animals[3];
-	animals[0] = new Dog();
-	animals[1] = new Cat();
-	animals[2] = new Cow();
+	Animal* my_animals[3];
+	my_animals[0] = new Dog();
+	my_animals[1] = new Cat();
+	my_animals[2] = new Cow();
 
 	// 각 동물의 울음소리(반복문)
 	for (int i = 0; i < 3; i++)
 	{
-		animals[i]->makeSound();
+		my_animals[i]->makeSound();
 	}
 
 	// 메모리 해제
 	for (int i = 0; i < 3; i++)
 	{
-		delete animals[i];
+		delete my_animals[i];
+		my_animals[i] = nullptr;
 	}
 
 	// 랜덤으로 동물원에 동물 추가하기
