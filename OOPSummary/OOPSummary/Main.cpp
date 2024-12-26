@@ -14,21 +14,18 @@ using namespace std;
 // - 반환값: Animal* (생성된 동물 객체의 포인터)
 Animal* createRandomAnimal()
 {
-	Animal* create_animal = nullptr;
 	int randomNum = rand() % 3;
 	switch (randomNum)
 	{
 	case 0:
-		create_animal = new Dog(); break;
+		return new Dog();
 	case 1:
-		create_animal = new Cat(); break;
+		return new Cat();
 	case 2:
-		create_animal = new Cow(); break;
+		return new Cow();
 	default:
-		break;
+		return nullptr; break;
 	}
-
-	return create_animal;
 }
 
 
@@ -44,6 +41,12 @@ int main()
 	for (int i = 0; i < 3; i++)
 	{
 		animals[i]->makeSound();
+	}
+
+	// 메모리 해제
+	for (int i = 0; i < 3; i++)
+	{
+		delete animals[i];
 	}
 
 	// 랜덤으로 동물원에 동물 추가하기
