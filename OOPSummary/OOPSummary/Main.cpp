@@ -1,6 +1,9 @@
 #include <cstdlib>
 #include <ctime>
 #include "Zoo.h"
+#include "Dog.h"
+#include "Cat.h"
+#include "Cow.h"
 using namespace std;
 
 
